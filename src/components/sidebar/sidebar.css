@@ -1,0 +1,7 @@
+.sidebar-container{
+    width: 100px;
+    height: auto;
+    background-color: rgb(235, 138, 11);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}

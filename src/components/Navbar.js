@@ -1,17 +1,16 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 
 const Navbar = ({ keyword, handleKeyPress, setKeyword, fetchMusicData }) => {
   return (
-    <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
+    <nav className="navbar navbar-light navbar-expand-lg bg-primary">
       <div className="container-fluid">
         <a className="navbar-brand" href="/v-music">
-          <i className="bi bi-music-note-list mx-3"></i> v-music
+          MusicRek
         </a>
         <div className="dropdown">
           <button
-            className="btn btn-sm btn-secondary dropdown-toggle"
+            className="btn btn-sm btn-light dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -55,8 +54,12 @@ const Navbar = ({ keyword, handleKeyPress, setKeyword, fetchMusicData }) => {
             placeholder="Search"
             aria-label="Search"
           />
-          <button onClick={fetchMusicData} className="btn btn-outline-success">
-            Search
+          <button
+            onClick={fetchMusicData}
+            className="btn btn-outline-success"
+            type="button"
+          >
+            <i className="bi bi-search"></i>
           </button>
         </div>
       </div>

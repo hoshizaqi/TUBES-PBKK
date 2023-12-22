@@ -112,20 +112,20 @@ function App() {
         </div>
         <div className="row">
           <div className="col-12 py-5 text-center">
-            <h1>
+            {/* <h1>
               <i className="bi bi-music-note-list mx-3"></i>
               v-music
-            </h1>
+            </h1> */}
             <h3 className="py-5">Discover music in 30 seconds</h3>
             <div>
-              <a
+              {/* <a
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-outline-dark"
                 href="https://github.com/Vishesh-Pandey/v-music"
               >
                 <i className="bi bi-github mx-2"></i>Github
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

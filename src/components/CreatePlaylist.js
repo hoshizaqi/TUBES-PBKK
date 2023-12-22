@@ -6,10 +6,17 @@ function CreatePlaylist() {
   const create = () => {
     let currentPlaylist = localStorage.getItem("allPlaylist");
     console.log(currentPlaylist);
-    currentPlaylist = JSON.parse(currentPlaylist);
-    currentPlaylist[playlistName] = []; // adding new empty playlist with given name
-    localStorage.setItem("allPlaylist", currentPlaylist.toString());
+    currentPlaylist = JSON.parse(currentPlaylist) || {}; // Inisialisasi sebagai objek kosong jika null
+    currentPlaylist[playlistName] = []; // Menambahkan playlist kosong baru dengan nama yang diberikan
+  
+    try {
+      const serializedPlaylist = JSON.stringify(currentPlaylist);
+      localStorage.setItem("allPlaylist", serializedPlaylist);
+    } catch (error) {
+      console.error("Kesalahan saat melakukan serialisasi playlist:", error);
+    }
   };
+  
 
   return (
     <div className="modal-dialog">
